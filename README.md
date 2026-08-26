@@ -1,21 +1,128 @@
-<!DOCTYPE html>
-<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nemo</title>
-<style>*{margin:0;padding:0;box-sizing:border-box}body{background:#0d1117;overflow:hidden}::selection{background:transparent}::-webkit-scrollbar{display:none}</style>
-</head><body>
-<script>
-var _x="PCFET0NUWVBFIGh0bWw+PGh0bWwgbGFuZz0iZW4iPjxoZWFkPjxtZXRhIGNoYXJzZXQ9IlVURi04Ij48bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLGluaXRpYWwtc2NhbGU9MS4wIj48dGl0bGU+TmVtbzwvdGl0bGU+PHN0eWxlPmJvZHl7bWFyZ2luOjA7cGFkZGluZzowO2JhY2tncm91bmQ6IzBkMTExNztjb2xvcjojYzlkMWQ5O2ZvbnQtZmFtaWx5Oi1hcHBsZS1zeXN0ZW0sQmxpbmtNYWNTeXN0ZW1Gb250LCdTZWdvZSBVSScsSGVsdmV0aWNhLEFyaWFsLHNhbnMtc2VyaWY7bGluZS1oZWlnaHQ6MS42fS5yZWFkbWV7bWF4LXdpZHRoOjk4MHB4O21hcmdpbjowIGF1dG87cGFkZGluZzozMnB4IDI0cHh9aW1ne21heC13aWR0aDoxMDAlO2hlaWdodDphdXRvfXRhYmxle2JvcmRlci1jb2xsYXBzZTpjb2xsYXBzZTt3aWR0aDoxMDAlO21hcmdpbjoxNnB4IDB9dGgsdGR7Ym9yZGVyOjFweCBzb2xpZCAjMzAzNjNkO3BhZGRpbmc6OHB4IDE2cHg7dGV4dC1hbGlnbjpsZWZ0fXRoe2JhY2tncm91bmQ6IzE2MWIyMn1ocntib3JkZXI6bm9uZTtib3JkZXItdG9wOjFweCBzb2xpZCAjMzAzNjNkO21hcmdpbjozMnB4IDB9aDEsaDIsaDN7Y29sb3I6IzU4YTZmZn1he2NvbG9yOiM1OGE2ZmY7dGV4dC1kZWNvcmF0aW9uOm5vbmV9QGtleWZyYW1lcyByYWluYm93ezAle2ZpbHRlcjpodWUtcm90YXRlKDBkZWcpfTEwMCV7ZmlsdGVyOmh1ZS1yb3RhdGUoMzYwZGVnKX19LnJlYWRtZSBpbWd7YW5pbWF0aW9uOnJhaW5ib3cgOHMgbGluZWFyIGluZmluaXRlfTwvc3R5bGU+PC9oZWFkPjxib2R5PjxkaXYgY2xhc3M9InJlYWRtZSI+PHAgYWxpZ249ImNlbnRlciI+CiAgPGltZyBzcmM9Imh0dHBzOi8vd2FsbHBhcGVyYWNjZXNzLmNvbS9mdWxsLzc5NDQwMzcuanBnIiB3aWR0aD0iMTAwJSIgYWx0PSJBbmltZSBCYW5uZXIiIC8+CjwvcD48cCBhbGlnbj0iY2VudGVyIj4KICA8aW1nIHNyYz0iaHR0cHM6Ly9yZWFkbWUtdHlwaW5nLXN2Zy5kZW1vbGFiLmNvbT9mb250PUZpcmErQ29kZSZ3ZWlnaHQ9NzAwJnNpemU9NDgmZHVyYXRpb249MjAwMCZwYXVzZT0xMDAwJmNvbG9yPTJFQ0M3MSZjZW50ZXI9dHJ1ZSZ2Q2VudGVyPXRydWUmd2lkdGg9NjAwJmxpbmVzPVNlbGFtYXQrRGF0YW5nIiBhbHQ9IlNlbGFtYXQgRGF0YW5nIiAvPgo8L3A+PHAgYWxpZ249ImNlbnRlciI+CiAgPGltZyBzcmM9Imh0dHBzOi8vcmVhZG1lLXR5cGluZy1zdmcuZGVtb2xhYi5jb20/Zm9udD1GaXJhK0NvZGUmcGF1c2U9MTAwMCZjb2xvcj0zNDk4REImY2VudGVyPXRydWUmdkNlbnRlcj10cnVlJndpZHRoPTQ4MCZsaW5lcz1EaXZlK2RlZXAsK2NvZGUrY29sb3JmdWwhKyVGMCU5RiU4QyU5MDtOZXh0LmpzKyU3QytGbHV0dGVyKyU3QytOb2RlLmpzKyU3QytQeXRob247QnVpbGRpbmcrYXdlc29tZSt0aGluZ3MrJUUyJTlDJUE4IiBhbHQ9IlR5cGluZyBTVkciIC8+CjwvcD48ZGl2IGFsaWduPSJjZW50ZXIiPjxwPjxhIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS9uZW1vb2JjIj48aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS9GVUxMU1RBQ0stREVWRUxPUEVSLTM0OThEQj9zdHlsZT1mb3ItdGhlLWJhZGdlJmxhYmVsQ29sb3I9MGQxMTE3JmxvZ289amF2YXNjcmlwdCZsb2dvQ29sb3I9d2hpdGUiIGFsdD0iRnVsbHN0YWNrIj48L2E+CjxhIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS9uZW1vb2JjIj48aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS9NT0JJTEUtQVBQUy0yRUNDNzE/c3R5bGU9Zm9yLXRoZS1iYWRnZSZsYWJlbENvbG9yPTBkMTExNyZsb2dvPWZsdXR0ZXImbG9nb0NvbG9yPXdoaXRlIiBhbHQ9Ik1vYmlsZSI+PC9hPgo8YSBocmVmPSJodHRwczovL2dpdGh1Yi5jb20vbmVtb29iYyI+PGltZyBzcmM9Imh0dHBzOi8vaW1nLnNoaWVsZHMuaW8vYmFkZ2UvT1BFTi1TT1VSQ0UtMUFCQzlDP3N0eWxlPWZvci10aGUtYmFkZ2UmbGFiZWxDb2xvcj0wZDExMTcmbG9nbz1vcGVuLXNvdXJjZS1pbml0aWF0aXZlJmxvZ29Db2xvcj13aGl0ZSIgYWx0PSJPcGVuIFNvdXJjZSI+PC9hPjwvcD4KPC9kaXY+PGRpdiBhbGlnbj0iY2VudGVyIj48cD48YSBocmVmPSJodHRwczovL2dpdGh1Yi5jb20vbmVtb29iYz90YWI9cmVwb3NpdG9yaWVzIj48aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS9keW5hbWljL2pzb24/dXJsPWh0dHBzJTNBJTJGJTJGYXBpLmdpdGh1Yi5jb20lMkZ1c2VycyUyRm5lbW9vYmMmcXVlcnk9JTI0LnB1YmxpY19yZXBvcyZsYWJlbD1SZXBvcyZjb2xvcj0zNDk4REImc3R5bGU9Zm9yLXRoZS1iYWRnZSZsb2dvPWdpdGh1YiZsb2dvQ29sb3I9d2hpdGUmbGFiZWxDb2xvcj0wZDExMTciIGFsdD0iUmVwb3MiPjwvYT4gPGEgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL25lbW9vYmM/dGFiPXN0YXJzIj48aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9naXRodWIvc3RhcnMvbmVtb29iYz9zdHlsZT1mb3ItdGhlLWJhZGdlJmNvbG9yPTJFQ0M3MSZsYWJlbD1TdGFycyZsYWJlbENvbG9yPTBkMTExNyZsb2dvPWdpdGh1YiZsb2dvQ29sb3I9d2hpdGUiIGFsdD0iU3RhcnMiPjwvYT48L3A+CjwvZGl2Pjxocj4KPGRpdiBhbGlnbj0iY2VudGVyIj48aDI+QWJvdXQ8L2gyPgo8cD5IaSwgSSBOZW1vIPCfkKA8L3A+CjxwPkZ1bGxzdGFjayBEZXZlbG9wZXIgYmFzZWQgaW4gSW5kb25lc2lhPC9wPgo8cD5TcGVjaWFsaXppbmcgaW4gPHN0cm9uZz5OZXh0LmpzPC9zdHJvbmc+LCA8c3Ryb25nPkZsdXR0ZXI8L3N0cm9uZz4sIDxzdHJvbmc+Tm9kZS5qczwvc3Ryb25nPiwgYW5kIDxzdHJvbmc+UHl0aG9uPC9zdHJvbmc+CkN1cnJlbnRseSBleHBsb3JpbmcgPHN0cm9uZz5BSSAvIE1hY2hpbmUgTGVhcm5pbmc8L3N0cm9uZz4gYW5kIDxzdHJvbmc+V2ViIEFuaW1hdGlvbjwvc3Ryb25nPgpPcGVuIHRvIGRpc2N1c3Npb25zIG9uIDxzdHJvbmc+V2ViIERldmVsb3BtZW50PC9zdHJvbmc+LCA8c3Ryb25nPk1vYmlsZSBBcHBzPC9zdHJvbmc+LCBhbmQgPHN0cm9uZz5VSS9VWCBEZXNpZ248L3N0cm9uZz48L3A+CjwvZGl2Pjxocj4KPGgyPlRlY2ggU3RhY2s8L2gyPgo8ZGl2IGFsaWduPSJjZW50ZXIiPjxhIGhyZWY9Imh0dHBzOi8vc2tpbGxpY29ucy5kZXYiPgo8aW1nIHNyYz0iaHR0cHM6Ly9za2lsbGljb25zLmRldi9pY29ucz9pPWphdmFzY3JpcHQsdHlwZXNjcmlwdCxweXRob24sbm9kZWpzLHJlYWN0LG5leHRqcyxmbHV0dGVyLGZpcmViYXNlLGV4cHJlc3MsaHRtbCxjc3MsZ2l0IiB0aXRsZT0idGVjaCIgLz4KPC9hPjwvZGl2Pjxocj4KPGRpdiBhbGlnbj0iY2VudGVyIj48aW1nIHNyYz0iaHR0cHM6Ly9tZWRpYS5naXBoeS5jb20vbWVkaWEvSUtVc0pZb1NROElSeDF3TzVSL2dpcGh5LmdpZiIgd2lkdGg9IjQyMCIgYWx0PSJBbmltZSBHaXJsIFRlY2giIC8+PC9kaXY+PGhyPgo8aDI+TGFuZ3VhZ2UgRGlzdHJpYnV0aW9uPC9oMj4KPHRhYmxlPgo8dGhlYWQ+Cjx0cj4KPHRoIGFsaWduPSJsZWZ0Ij5MYW5ndWFnZTwvdGg+Cjx0aCBhbGlnbj0ibGVmdCI+PC90aD4KPC90cj4KPC90aGVhZD4KPHRib2R5Pjx0cj4KPHRkIGFsaWduPSJsZWZ0Ij5KYXZhU2NyaXB0PC90ZD4KPHRkIGFsaWduPSJsZWZ0Ij48aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS9KUy0zNDk4REI/c3R5bGU9ZmxhdC1zcXVhcmUmbGFiZWxDb2xvcj0xNjFiMjIiIGFsdD0iIj48L3RkPgo8L3RyPgo8dHI+Cjx0ZCBhbGlnbj0ibGVmdCI+VHlwZVNjcmlwdDwvdGQ+Cjx0ZCBhbGlnbj0ibGVmdCI+PGltZyBzcmM9Imh0dHBzOi8vaW1nLnNoaWVsZHMuaW8vYmFkZ2UvVFMtMkVDQzcxP3N0eWxlPWZsYXQtc3F1YXJlJmxhYmVsQ29sb3I9MTYxYjIyIiBhbHQ9IiI+PC90ZD4KPC90cj4KPHRyPgo8dGQgYWxpZ249ImxlZnQiPlB5dGhvbjwvdGQ+Cjx0ZCBhbGlnbj0ibGVmdCI+PGltZyBzcmM9Imh0dHBzOi8vaW1nLnNoaWVsZHMuaW8vYmFkZ2UvUFktRTc0QzNDP3N0eWxlPWZsYXQtc3F1YXJlJmxhYmVsQ29sb3I9MTYxYjIyIiBhbHQ9IiI+PC90ZD4KPC90cj4KPHRyPgo8dGQgYWxpZ249ImxlZnQiPk5vZGUuanM8L3RkPgo8dGQgYWxpZ249ImxlZnQiPjxpbWcgc3JjPSJodHRwczovL2ltZy5zaGllbGRzLmlvL2JhZGdlL05vZGUtMkVDQzcxP3N0eWxlPWZsYXQtc3F1YXJlJmxhYmVsQ29sb3I9MTYxYjIyIiBhbHQ9IiI+PC90ZD4KPC90cj4KPHRyPgo8dGQgYWxpZ249ImxlZnQiPk90aGVyPC90ZD4KPHRkIGFsaWduPSJsZWZ0Ij48aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS81JS05NUE1QTY/c3R5bGU9ZmxhdC1zcXVhcmUmbGFiZWxDb2xvcj0xNjFiMjIiIGFsdD0iIj48L3RkPgo8L3RyPgo8L3Rib2R5PjwvdGFibGU+Cjxocj4KPGgyPkluZnJhc3RydWN0dXJlIFN1bW1hcnk8L2gyPgo8dGFibGU+Cjx0aGVhZD4KPHRyPgo8dGggYWxpZ249ImxlZnQiPkNhdGVnb3J5PC90aD4KPHRoIGFsaWduPSJsZWZ0Ij5UZWNobm9sb2dpZXM8L3RoPgo8L3RyPgo8L3RoZWFkPgo8dGJvZHk+PHRyPgo8dGQgYWxpZ249ImxlZnQiPkxhbmd1YWdlczwvdGQ+Cjx0ZCBhbGlnbj0ibGVmdCI+SmF2YVNjcmlwdCwgVHlwZVNjcmlwdCwgUHl0aG9uLCBEYXJ0PC90ZD4KPC90cj4KPHRyPgo8dGQgYWxpZ249ImxlZnQiPkZyYW1ld29ya3M8L3RkPgo8dGQgYWxpZ249ImxlZnQiPk5leHQuanMsIFJlYWN0LCBGbHV0dGVyLCBFeHByZXNzLCBOb2RlLmpzPC90ZD4KPC90cj4KPHRyPgo8dGQgYWxpZ249ImxlZnQiPkJhY2tlbmQ8L3RkPgo8dGQgYWxpZ249ImxlZnQiPkZpcmViYXNlLCBSRVNUIEFQSTwvdGQ+CjwvdHI+Cjx0cj4KPHRkIGFsaWduPSJsZWZ0Ij5Ub29sczwvdGQ+Cjx0ZCBhbGlnbj0ibGVmdCI+R2l0LCBHaXRIdWIsIFZTIENvZGUsIFRlcm11eDwvdGQ+CjwvdHI+CjwvdGJvZHk+PC90YWJsZT4KPGhyPgo8aDI+U3lzdGVtIE1ldHJpY3M8L2gyPgo8ZGl2IGFsaWduPSJjZW50ZXIiPjx0YWJsZT4KPHRoZWFkPgo8dHI+Cjx0aD5NZXRyaWM8L3RoPgo8dGg+VmFsdWU8L3RoPgo8L3RyPgo8L3RoZWFkPgo8dGJvZHk+PHRyPgo8dGQ+U3RhdHVzPC90ZD4KPHRkPjxpbWcgc3JjPSJodHRwczovL2ltZy5zaGllbGRzLmlvL2JhZGdlL1N0YXR1cy1PbmxpbmUtMkVDQzcxP3N0eWxlPWZvci10aGUtYmFkZ2UmbGFiZWxDb2xvcj0wZDExMTcmbG9nbz1TdGF0dXNwYWdlJmxvZ29Db2xvcj13aGl0ZSIgYWx0PSIiPjwvdGQ+CjwvdHI+Cjx0cj4KPHRkPkNvbW1pdHM8L3RkPgo8dGQ+PGltZyBzcmM9Imh0dHBzOi8vaW1nLnNoaWVsZHMuaW8vYmFkZ2UvQ29tbWl0cy1BY3RpdmUtMzQ5OERCP3N0eWxlPWZvci10aGUtYmFkZ2UmbGFiZWxDb2xvcj0wZDExMTciIGFsdD0iIj48L3RkPgo8L3RyPgo8dHI+Cjx0ZD5Qcm9maWxlIFN0YXR1czwvdGQ+Cjx0ZD48aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS9Qcm9maWxlLUFjdGl2ZS0xQUJDOUM/c3R5bGU9Zm9yLXRoZS1iYWRnZSZsYWJlbENvbG9yPTBkMTExNyIgYWx0PSIiPjwvdGQ+CjwvdHI+CjwvdGJvZHk+PC90YWJsZT4KPC9kaXY+PGhyPgo8aDI+Q3VycmVudCBGb2N1czwvaDI+CjxkaXYgYWxpZ249ImNlbnRlciI+PHA+PGEgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL25lbW9vYmMiPjxpbWcgc3JjPSJodHRwczovL2ltZy5zaGllbGRzLmlvL2JhZGdlL0JVSUxESU5HLU5leHQuanMrQXBwcy0zNDk4REI/c3R5bGU9Zm9yLXRoZS1iYWRnZSZsYWJlbENvbG9yPTBkMTExNyZsb2dvPW5leHQuanMmbG9nb0NvbG9yPXdoaXRlIiBhbHQ9Ik5leHQuanMiPjwvYT4KPGEgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL25lbW9vYmMiPjxpbWcgc3JjPSJodHRwczovL2ltZy5zaGllbGRzLmlvL2JhZGdlL0JVSUxESU5HLUZsdXR0ZXIrTW9iaWxlLTJFQ0M3MT9zdHlsZT1mb3ItdGhlLWJhZGdlJmxhYmVsQ29sb3I9MGQxMTE3JmxvZ289Zmx1dHRlciZsb2dvQ29sb3I9d2hpdGUiIGFsdD0iRmx1dHRlciI+PC9hPgo8YSBocmVmPSJodHRwczovL2dpdGh1Yi5jb20vbmVtb29iYyI+PGltZyBzcmM9Imh0dHBzOi8vaW1nLnNoaWVsZHMuaW8vYmFkZ2UvTEVBUk5JTkctQUkrJTJGK01MLTFBQkM5Qz9zdHlsZT1mb3ItdGhlLWJhZGdlJmxhYmVsQ29sb3I9MGQxMTE3JmxvZ289dGVuc29yZmxvdyZsb2dvQ29sb3I9d2hpdGUiIGFsdD0iQUkiPjwvYT48L3A+CjwvZGl2Pjxocj4KPGgyPkNvbm5lY3Q8L2gyPgo8ZGl2IGFsaWduPSJjZW50ZXIiPjxwPjxhIGhyZWY9Imh0dHBzOi8vZ2l0aHViLmNvbS9uZW1vb2JjIj48aW1nIHNyYz0iaHR0cHM6Ly9pbWcuc2hpZWxkcy5pby9iYWRnZS9HaXRIdWItbmVtb29iYy0wZDExMTc/c3R5bGU9Zm9yLXRoZS1iYWRnZSZsb2dvPWdpdGh1YiZsb2dvQ29sb3I9MzQ5OERCIiBhbHQ9IkdpdEh1YiI+PC9hPgo8YSBocmVmPSJodHRwczovL3d3dy5ucG1qcy5jb20vfm5lbW9vYmMiPjxpbWcgc3JjPSJodHRwczovL2ltZy5zaGllbGRzLmlvL2JhZGdlL25wbS1uZW1vb2JjLTM0OThEQj9zdHlsZT1mb3ItdGhlLWJhZGdlJmxvZ289bnBtJmxvZ29Db2xvcj13aGl0ZSIgYWx0PSJucG0iPjwvYT4KPGEgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL25lbW9vYmMiPjxpbWcgc3JjPSJodHRwczovL2ltZy5zaGllbGRzLmlvL2JhZGdlL1Rlcm11eC0yRUNDNzE/c3R5bGU9Zm9yLXRoZS1iYWRnZSZsb2dvPWdub21ldGVybWluYWwmbG9nb0NvbG9yPXdoaXRlIiBhbHQ9IlRlcm11eCI+PC9hPjwvcD4KPC9kaXY+PHAgYWxpZ249ImNlbnRlciI+CiAgPGEgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL25lbW9vYmMiIHRhcmdldD0iX2JsYW5rIj4KICAgIDxpbWcgc3JjPSJodHRwczovL2NhcHN1bGUtcmVuZGVyLnZlcmNlbC5hcHAvYXBpP3R5cGU9cmVjdCZjb2xvcj0wOjM0OThEQiw1MDoyRUNDNzEsMTAwOjM0OThEQiZoZWlnaHQ9NTAmc2VjdGlvbj1mb290ZXImZm9udFNpemU9MTQmZm9udENvbG9yPWZmZmZmZiZmb250QWxpZ25ZPTUwJmFuaW1hdGlvbj1mYWRlSW4iIGFsdD0iZm9vdGVyIiAvPgogIDwvYT4KPC9wPgo8L2Rpdj48L2JvZHk+PC9odG1sPg==";
-var _d=atob(_x);
-var _f=document.createElement("iframe");
-_f.style.cssText="position:fixed;top:0;left:0;width:100%;height:100%;border:none;z-index:9999";
-_f.setAttribute("sandbox","allow-same-origin allow-scripts");
-document.body.appendChild(_f);
-var _w=_f.contentDocument||_f.contentWindow.document;
-_w.open();_w.write(_d);_w.close();
-</script>
-<script>
-document.onkeydown=function(e){if(e.key==="F12"||e.keyCode===123)return false;if(e.ctrlKey&&e.shiftKey&&(e.keyCode===73||e.keyCode===74||e.keyCode===67))return false;if(e.ctrlKey&&e.keyCode===85)return false};
-document.oncontextmenu=function(){return false};
-document.onselectstart=function(){return false};
-</script>
-</body></html>
+<p align="center">
+  <img src="https://wallpaperaccess.com/full/7944037.jpg" width="100%" alt="Anime Banner" />
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=48&duration=2000&pause=1000&color=2ECC71&center=true&vCenter=true&width=600&lines=Selamat+Datang" alt="Selamat Datang" />
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=3498DB&center=true&vCenter=true&width=480&lines=Dive+deep,+code+colorful!+%F0%9F%8C%90;Next.js+%7C+Flutter+%7C+Node.js+%7C+Python;Building+awesome+things+%E2%9C%A8" alt="Typing SVG" />
+</p>
+
+<div align="center">
+
+[![Fullstack](https://img.shields.io/badge/FULLSTACK-DEVELOPER-3498DB?style=for-the-badge&labelColor=0d1117&logo=javascript&logoColor=white)](https://github.com/nemoobc)
+[![Mobile](https://img.shields.io/badge/MOBILE-APPS-2ECC71?style=for-the-badge&labelColor=0d1117&logo=flutter&logoColor=white)](https://github.com/nemoobc)
+[![Open Source](https://img.shields.io/badge/OPEN-SOURCE-1ABC9C?style=for-the-badge&labelColor=0d1117&logo=open-source-initiative&logoColor=white)](https://github.com/nemoobc)
+
+</div>
+
+<div align="center">
+
+[![Repos](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fnemoobc&query=%24.public_repos&label=Repos&color=3498DB&style=for-the-badge&logo=github&logoColor=white&labelColor=0d1117)](https://github.com/nemoobc?tab=repositories) [![Stars](https://img.shields.io/github/stars/nemoobc?style=for-the-badge&color=2ECC71&label=Stars&labelColor=0d1117&logo=github&logoColor=white)](https://github.com/nemoobc?tab=stars)
+
+</div>
+
+---
+
+<div align="center">
+
+## About
+
+Hi, I Nemo 🐠
+
+Fullstack Developer based in Indonesia
+
+Specializing in **Next.js**, **Flutter**, **Node.js**, and **Python**
+Currently exploring **AI / Machine Learning** and **Web Animation**
+Open to discussions on **Web Development**, **Mobile Apps**, and **UI/UX Design**
+
+</div>
+
+---
+
+## Tech Stack
+
+<div align="center">
+
+<a href="https://skillicons.dev">
+<img src="https://skillicons.dev/icons?i=javascript,typescript,python,nodejs,react,nextjs,flutter,firebase,express,html,css,git" title="tech" />
+</a>
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="https://media.giphy.com/media/IKUsJYoSQ8IRx1wO5R/giphy.gif" width="420" alt="Anime Girl Tech" />
+
+</div>
+
+---
+
+## Language Distribution
+
+| Language | |
+|:---------|:-|
+| JavaScript | ![](https://img.shields.io/badge/JS-3498DB?style=flat-square&labelColor=161b22) |
+| TypeScript | ![](https://img.shields.io/badge/TS-2ECC71?style=flat-square&labelColor=161b22) |
+| Python | ![](https://img.shields.io/badge/PY-E74C3C?style=flat-square&labelColor=161b22) |
+| Node.js | ![](https://img.shields.io/badge/Node-2ECC71?style=flat-square&labelColor=161b22) |
+| Other | ![](https://img.shields.io/badge/5%-95A5A6?style=flat-square&labelColor=161b22) |
+
+---
+
+## Infrastructure Summary
+
+| Category | Technologies |
+|:---------|:-------------|
+| Languages | JavaScript, TypeScript, Python, Dart |
+| Frameworks | Next.js, React, Flutter, Express, Node.js |
+| Backend | Firebase, REST API |
+| Tools | Git, GitHub, VS Code, Termux |
+
+---
+
+## System Metrics
+
+<div align="center">
+
+| Metric | Value |
+|--------|-------|
+| Status | ![](https://img.shields.io/badge/Status-Online-2ECC71?style=for-the-badge&labelColor=0d1117&logo=Statuspage&logoColor=white) |
+| Commits | ![](https://img.shields.io/badge/Commits-Active-3498DB?style=for-the-badge&labelColor=0d1117) |
+| Profile Status | ![](https://img.shields.io/badge/Profile-Active-1ABC9C?style=for-the-badge&labelColor=0d1117) |
+
+</div>
+
+---
+
+## Current Focus
+
+<div align="center">
+
+[![Next.js](https://img.shields.io/badge/BUILDING-Next.js+Apps-3498DB?style=for-the-badge&labelColor=0d1117&logo=next.js&logoColor=white)](https://github.com/nemoobc)
+[![Flutter](https://img.shields.io/badge/BUILDING-Flutter+Mobile-2ECC71?style=for-the-badge&labelColor=0d1117&logo=flutter&logoColor=white)](https://github.com/nemoobc)
+[![AI](https://img.shields.io/badge/LEARNING-AI+%2F+ML-1ABC9C?style=for-the-badge&labelColor=0d1117&logo=tensorflow&logoColor=white)](https://github.com/nemoobc)
+
+</div>
+
+---
+
+## Connect
+
+<div align="center">
+
+[![GitHub](https://img.shields.io/badge/GitHub-nemoobc-0d1117?style=for-the-badge&logo=github&logoColor=3498DB)](https://github.com/nemoobc)
+[![npm](https://img.shields.io/badge/npm-nemoobc-3498DB?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/~nemoobc)
+[![Termux](https://img.shields.io/badge/Termux-2ECC71?style=for-the-badge&logo=gnometerminal&logoColor=white)](https://github.com/nemoobc)
+
+</div>
+
+<p align="center">
+  <a href="https://github.com/nemoobc" target="_blank">
+    <img src="https://capsule-render.vercel.app/api?type=rect&color=0:3498DB,50:2ECC71,100:3498DB&height=50&section=footer&fontSize=14&fontColor=ffffff&fontAlignY=50&animation=fadeIn" alt="footer" />
+  </a>
+</p>
