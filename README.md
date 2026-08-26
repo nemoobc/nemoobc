@@ -46,9 +46,7 @@ Open to discussions on **Web Development**, **Mobile Apps**, and **UI/UX Design*
 
 <div align="center">
 
-<a href="https://skillicons.dev">
 <img src="https://skillicons.dev/icons?i=javascript,typescript,python,nodejs,react,nextjs,flutter,firebase,express,html,css,git" title="tech" />
-</a>
 
 </div>
 
