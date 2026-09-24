@@ -126,3 +126,5 @@ Open to discussions on **Web Development**, **Mobile Apps**, and **UI/UX Design*
     <img src="https://capsule-render.vercel.app/api?type=rect&color=0:3498DB,50:2ECC71,100:3498DB&height=50&section=footer&fontSize=14&fontColor=ffffff&fontAlignY=50&animation=fadeIn" alt="footer" />
   </a>
 </p>
+
+<!-- housekeeping: link check -->
